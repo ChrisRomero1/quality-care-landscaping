@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quality Care Landscaping | Signal Mountain, TN</title>
+  <meta name="description" content="Professional landscaping services in Signal Mountain, TN. Lawn mowing, edging, leaf cleanup, shrub trimming, mulch installation & more. Call (423)-826-9323 for a free quote." />
+  <meta name="keywords" content="landscaping Signal Mountain TN, lawn care Signal Mountain, lawn mowing Signal Mountain Tennessee, yard cleanup Signal Mountain" />
+  <meta property="og:title" content="Quality Care Landscaping | Signal Mountain, TN" />
+  <meta property="og:description" content="Student-owned landscaping business serving Signal Mountain, TN. Reliable. Affordable. Local." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #15803d;
+      --green-dark: #166534;
+      --green-light: #dcfce7;
+      --cream: #fafaf7;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --gray-900: #111827;
+      --white: #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      color: var(--gray-900);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ---- NAV ---- */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--green);
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+
+    .logo span { color: var(--gray-900); }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--gray-700);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--green); }
+
+    .nav-cta {
+      background: var(--green);
+      color: white !important;
+      padding: 0.5rem 1.25rem;
+      border-radius: 6px;
+      font-weight: 600 !important;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--green-dark) !important; color: white !important; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--gray-700);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      border-top: 1px solid var(--gray-200);
+      background: white;
+    }
+
+    .mobile-menu.open { display: flex; }
+
+    .mobile-menu a {
+      padding: 0.875rem 1.5rem;
+      text-decoration: none;
+      color: var(--gray-700);
+      font-weight: 500;
+      border-bottom: 1px solid var(--gray-100);
+      transition: color 0.2s;
+    }
+
+    .mobile-menu a:hover { color: var(--green); }
+
+    /* ---- HERO ---- */
+    .hero {
+      position: relative;
+      height: 100svh;
+      min-height: 580px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663562922545/2q3qepax745A8Top6XT8KM/hero-main-YvLjNjMnwv4LdmJ3s77HNx.webp');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.45) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: white;
+      padding: 0 1.5rem;
+      max-width: 760px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: white;
+      padding: 0.375rem 1rem;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.75rem, 7vw, 5.5rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      font-weight: 400;
+      opacity: 0.9;
+      margin-bottom: 2.25rem;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--green);
+      color: white;
+      padding: 0.875rem 2rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-primary:hover { background: var(--green-dark); transform: translateY(-1px); }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.4);
+      color: white;
+      padding: 0.875rem 2rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .btn-ghost:hover { background: rgba(255,255,255,0.25); }
+
+    /* ---- TRUST BAR ---- */
+    .trust-bar {
+      background: var(--green);
+      color: white;
+      padding: 0.875rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      opacity: 0.95;
+    }
+
+    /* ---- SECTIONS ---- */
+    section { padding: 5rem 1.5rem; }
+
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.1;
+      color: var(--gray-900);
+      margin-bottom: 1rem;
+    }
+
+    .section-sub {
+      font-size: 1.1rem;
+      color: var(--gray-600);
+      max-width: 520px;
+      line-height: 1.6;
+    }
+
+    /* ---- SERVICES ---- */
+    #services { background: var(--white); }
+
+    .services-header { margin-bottom: 3.5rem; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+
+    .service-item {
+      padding: 2rem 2rem 2rem 1.75rem;
+      border-left: 3px solid var(--green-light);
+      transition: border-color 0.2s, padding-left 0.2s;
+      cursor: default;
+    }
+
+    .service-item:hover {
+      border-left-color: var(--green);
+      padding-left: 2.25rem;
+    }
+
+    .service-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--green-light);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .service-item h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 0.5rem;
+    }
+
+    .service-item p {
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      line-height: 1.55;
+    }
+
+    /* ---- ABOUT ---- */
+    #about { background: var(--cream); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-text p {
+      color: var(--gray-700);
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+      font-size: 1.025rem;
+    }
+
+    .about-text p:last-child { margin-bottom: 0; }
+
+    /* Photo card */
+    .founder-photo-wrap {
+      position: relative;
+    }
+
+    .founder-photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 16px;
+      display: block;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    }
+
+    .founder-label {
+      position: absolute;
+      bottom: 1.25rem;
+      left: 1.25rem;
+      right: 1.25rem;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .founder-label-name {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--gray-900);
+      letter-spacing: -0.3px;
+    }
+
+    .founder-label-role {
+      font-size: 0.8rem;
+      color: var(--gray-600);
+      font-weight: 500;
+    }
+
+    .founder-label-badge {
+      background: var(--green-light);
+      color: var(--green-dark);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.35rem 0.75rem;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+
+    .about-stats {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .about-stat-num {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--gray-900);
+      letter-spacing: -0.5px;
+    }
+
+    .about-stat-label {
+      font-size: 0.8rem;
+      color: var(--gray-600);
+      font-weight: 500;
+    }
+
+    /* ---- CONTACT ---- */
+    #contact { background: var(--white); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .contact-info { padding-top: 0.5rem; }
+
+    .contact-info .section-title { margin-bottom: 1.25rem; }
+
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 0.875rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--gray-100);
+    }
+
+    .contact-detail:last-of-type { border-bottom: none; }
+
+    .contact-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--green-light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.1rem;
+    }
+
+    .contact-detail a {
+      color: var(--gray-900);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      display: block;
+    }
+
+    .contact-detail a:hover { color: var(--green); }
+
+    .contact-detail span {
+      font-size: 0.8rem;
+      color: var(--gray-600);
+    }
+
+    /* ---- FORM ---- */
+    form {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      padding: 2.5rem;
+    }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    .form-group { margin-bottom: 1.25rem; }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--gray-700);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      color: var(--gray-900);
+      background: white;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+      appearance: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(21,128,61,0.1);
+    }
+
+    .form-group textarea { min-height: 120px; resize: vertical; }
+
+    .form-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      padding-right: 2.5rem;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: var(--green);
+      color: white;
+      border: none;
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      margin-top: 0.5rem;
+    }
+
+    .btn-submit:hover { background: var(--green-dark); transform: translateY(-1px); }
+    .btn-submit:active { transform: translateY(0); }
+
+    .form-note {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--gray-600);
+      margin-top: 0.75rem;
+    }
+
+    /* ---- FOOTER ---- */
+    footer {
+      background: var(--gray-900);
+      color: white;
+      padding: 3rem 1.5rem 2rem;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-brand .logo { font-size: 1.3rem; }
+
+    .footer-brand p {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.6;
+    }
+
+    .footer-col h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 1rem;
+    }
+
+    .footer-col a {
+      display: block;
+      text-decoration: none;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.95rem;
+      margin-bottom: 0.6rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover { color: white; }
+
+    .footer-col p {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-bottom p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ---- ANIMATIONS ---- */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 900px) {
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-grid .founder-photo-wrap { max-width: 360px; margin: 0 auto; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .services-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .trust-bar { gap: 1rem; }
+      .hero { background-attachment: scroll; }
+      section { padding: 3.5rem 1.25rem; }
+      .about-stats { gap: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="top">
+  <div class="nav-inner">
+    <a href="#top" class="logo">Quality <span>Care</span></a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services" onclick="closeMobile()">Services</a>
+    <a href="#about" onclick="closeMobile()">About</a>
+    <a href="#contact" onclick="closeMobile()">Get a Quote</a>
+    <a href="tel:4238269323">📞 (423)-826-9323</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-tag">Signal Mountain, TN</div>
+    <h1>Your Yard,<br>Our Pride.</h1>
+    <p>Reliable. Affordable. Local. Professional landscaping from your neighbors at SMMHS.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">
+        Get a Free Quote
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="tel:4238269323" class="btn-ghost">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.41 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012.32 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.14 6.14l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Call Now
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">
+    <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z" fill="currentColor"/></svg>
+    Signal Mountain, TN
+  </div>
+  <div class="trust-item">
+    <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Student-Owned & Operated
+  </div>
+  <div class="trust-item">
+    <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Free Quotes · Fast Response
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-inner">
+    <div class="services-header fade-up">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">Everything Your<br>Yard Needs</h2>
+      <p class="section-sub">Six core services delivered with care and attention to detail — every time.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-item fade-up">
+        <div class="service-icon">🌿</div>
+        <h3>Lawn Mowing & Edging</h3>
+        <p>Crisp cuts and precise edging that make your yard stand out on the street.</p>
+      </div>
+      <div class="service-item fade-up">
+        <div class="service-icon">✂️</div>
+        <h3>Trimming & Blowing</h3>
+        <p>Expert trimming around obstacles and full blowout cleanup for a finished look.</p>
+      </div>
+      <div class="service-item fade-up">
+        <div class="service-icon">🍂</div>
+        <h3>Leaf Cleanup</h3>
+        <p>Seasonal leaf removal and yard cleanup so your lawn breathes through fall and winter.</p>
+      </div>
+      <div class="service-item fade-up">
+        <div class="service-icon">🌳</div>
+        <h3>Shrub Trimming</h3>
+        <p>Shaped and healthy shrubs and hedges that boost your curb appeal year-round.</p>
+      </div>
+      <div class="service-item fade-up">
+        <div class="service-icon">🪨</div>
+        <h3>Mulch Installation</h3>
+        <p>Quality mulch laid clean and even in your landscaping beds — moisture locked in.</p>
+      </div>
+      <div class="service-item fade-up">
+        <div class="service-icon">🧹</div>
+        <h3>General Yard Cleanup</h3>
+        <p>Full-service yard maintenance for anything that needs a fresh start.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-text fade-up">
+        <div class="section-label">Our Story</div>
+        <h2 class="section-title">Local Students.<br>Real Results.</h2>
+        <p>Quality Care Landscaping is a student-owned business proudly serving Signal Mountain, Tennessee. Founded and run by Gideon and Aiden — two students from Signal Mountain Middle High School — we bring energy, dedication, and a genuine commitment to every yard we touch.</p>
+        <p>We believe professional landscaping shouldn't be complicated or expensive. Our focus is reliable, affordable service with attention to the details that matter. Every yard reflects our personal standard of quality.</p>
+        <p>When you hire Quality Care, you're supporting local students who care about making Signal Mountain more beautiful, one yard at a time.</p>
+        <div class="about-stats">
+          <div>
+            <div class="about-stat-num">6</div>
+            <div class="about-stat-label">Services</div>
+          </div>
+          <div>
+            <div class="about-stat-num">24h</div>
+            <div class="about-stat-label">Quote Response</div>
+          </div>
+          <div>
+            <div class="about-stat-num">100%</div>
+            <div class="about-stat-label">Local</div>
+          </div>
+        </div>
+      </div>
+      <div class="founder-photo-wrap fade-up">
+        <img
+          src="images/gideon.jpg"
+          alt="Gideon, co-founder of Quality Care Landscaping"
+          class="founder-photo"
+          loading="lazy"
+        />
+        <div class="founder-label">
+          <div>
+            <div class="founder-label-name">Gideon</div>
+            <div class="founder-label-role">Co-Founder · Quality Care</div>
+          </div>
+          <div class="founder-label-badge">SMMHS</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-info fade-up">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Ready to Transform Your Yard?</h2>
+        <p class="section-sub" style="margin-bottom: 2rem;">Fill out the form and Gideon and Aiden will get back to you within 24 hours.</p>
+
+        <div class="contact-detail">
+          <div class="contact-icon">📞</div>
+          <div>
+            <a href="tel:4238269323">(423)-826-9323</a>
+            <span>Call or text anytime</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">📍</div>
+          <div>
+            <a>Signal Mountain, TN</a>
+            <span>Serving the local community</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">📸</div>
+          <div>
+            <a href="https://instagram.com/qualitycarelandscaping12" target="_blank" rel="noopener noreferrer">@qualitycarelandscaping12</a>
+            <span>Follow us on Instagram</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="fade-up">
+        <form name="quote-request" method="POST" netlify data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleSubmit(event)">
+          <input type="hidden" name="form-name" value="quote-request" />
+          <input type="hidden" name="bot-field" />
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone *</label>
+              <input type="tel" id="phone" name="phone" placeholder="(423) 123-4567" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service Needed *</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option>Lawn Mowing & Edging</option>
+              <option>Trimming & Blowing</option>
+              <option>Leaf Cleanup</option>
+              <option>Shrub Trimming</option>
+              <option>Mulch Installation</option>
+              <option>General Yard Cleanup</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit" id="submitBtn">Get Your Free Quote</button>
+          <p class="form-note">We respond within 24 hours. No spam, ever.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo" style="color: #4ade80;">Quality <span style="color: white;">Care</span></a>
+        <p>Student-owned landscaping serving Signal Mountain, TN. Reliable. Affordable. Local.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">Lawn Mowing & Edging</a>
+        <a href="#services">Trimming & Blowing</a>
+        <a href="#services">Leaf Cleanup</a>
+        <a href="#services">Shrub Trimming</a>
+        <a href="#services">Mulch Installation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:4238269323">(423)-826-9323</a>
+        <a href="https://instagram.com/qualitycarelandscaping12" target="_blank" rel="noopener noreferrer">@qualitycarelandscaping12</a>
+        <p>Signal Mountain, TN</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Quality Care Landscaping. Owned and operated by Gideon and Aiden.</p>
+      <p>SMMHS · Signal Mountain, TN</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  function closeMobile() { mobileMenu.classList.remove('open'); }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 60);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  function handleSubmit(e) {
+    const btn = document.getElementById('submitBtn');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+  }
+</script>
+
+</body>
+</html>
