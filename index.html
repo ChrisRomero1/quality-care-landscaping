@@ -806,6 +806,113 @@
       max-width: 640px;
     }
 
+    /* ─── BRAND STATEMENT ─── */
+    #brand {
+      background: var(--green);
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .brand-tagline {
+      font-size: clamp(2rem, 6vw, 4.5rem);
+      font-weight: 800;
+      color: white;
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 1.25rem;
+    }
+
+    .brand-tagline span {
+      color: rgba(255,255,255,0.4);
+    }
+
+    .brand-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.65);
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* ─── SERVICE AREA ─── */
+    #area { background: var(--cream); }
+
+    .area-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .area-list {
+      list-style: none;
+      margin-top: 2rem;
+    }
+
+    .area-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .area-list li:first-child { border-top: 1px solid var(--border); }
+
+    .area-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--green-mid);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .area-note {
+      margin-top: 1.5rem;
+      font-size: 0.875rem;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    .area-callout {
+      background: var(--green);
+      border-radius: 12px;
+      padding: 2.5rem;
+      color: white;
+    }
+
+    .area-callout h3 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.75rem;
+    }
+
+    .area-callout p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: white;
+      color: var(--green);
+      font-size: 0.875rem;
+      font-weight: 800;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .btn-white:hover { opacity: 0.9; }
+
     /* ─── REVEAL ─── */
     .reveal {
       opacity: 0;
@@ -836,6 +943,7 @@
       .fg-row { grid-template-columns: 1fr; }
       footer { flex-direction: column; align-items: flex-start; }
       .pricing-detail { display: none; }
+      .area-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     }
 
     @media (max-width: 480px) {
@@ -981,6 +1089,14 @@
   </div>
 </section>
 
+<!-- BRAND STATEMENT -->
+<section id="brand">
+  <div class="inner">
+    <p class="brand-tagline reveal">Reliable<span>.</span> Affordable<span>.</span> Local<span>.</span></p>
+    <p class="brand-sub reveal">Proudly serving Signal Mountain since day one</p>
+  </div>
+</section>
+
 <!-- ABOUT -->
 <section id="about">
   <div class="inner">
@@ -1116,6 +1232,34 @@
   </div>
 </section>
 
+<!-- SERVICE AREA -->
+<section id="area">
+  <div class="inner">
+    <div class="area-grid">
+      <div>
+        <p class="eyebrow reveal">Where We Work</p>
+        <h2 class="sec-title reveal">We Know These<br>Streets.</h2>
+        <ul class="area-list">
+          <li class="reveal"><span class="area-dot"></span>Signal Mountain</li>
+          <li class="reveal"><span class="area-dot"></span>Walden</li>
+          <li class="reveal"><span class="area-dot"></span>Fairmount</li>
+          <li class="reveal"><span class="area-dot"></span>Falling Water</li>
+          <li class="reveal"><span class="area-dot"></span>Surrounding Areas</li>
+        </ul>
+        <p class="area-note reveal">Not sure if we cover your address? Just text us at (423)-826-9323 and we'll let you know.</p>
+      </div>
+      <div class="area-callout reveal">
+        <h3>Local to Signal Mountain</h3>
+        <p>We're students here — we know the roads, the neighborhoods, and the neighbors. That's the advantage of hiring local over a big company that sends whoever's available.</p>
+        <a href="tel:4238269323" class="btn-white">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.41 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012.32 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.14 6.14l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Check Your Address
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- INSTAGRAM CTA -->
 <section id="social">
   <div class="inner">
@@ -1145,7 +1289,7 @@
         </div>
       </div>
       <div class="form-box reveal">
-        <h3>Request a Free Quote</h3>
+        <h3>Book a Visit</h3>
         <form name="quote-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleSubmit(event)">
           <input type="hidden" name="form-name" value="quote-request" />
           <input type="hidden" name="bot-field" style="display:none" />
@@ -1175,11 +1319,35 @@
               <option>General Yard Cleanup</option>
             </select>
           </div>
+          <div class="fg-row">
+            <div class="fg">
+              <label>Preferred Day</label>
+              <select name="preferred_day">
+                <option value="" disabled selected>Any day</option>
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+                <option>Flexible</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label>Preferred Time</label>
+              <select name="preferred_time">
+                <option value="" disabled selected>Any time</option>
+                <option>Morning (8am–12pm)</option>
+                <option>Afternoon (12pm–5pm)</option>
+                <option>Flexible</option>
+              </select>
+            </div>
+          </div>
           <div class="fg">
             <label>Message (optional)</label>
-            <textarea name="message" placeholder="Anything we should know..."></textarea>
+            <textarea name="message" placeholder="Anything we should know about the yard..."></textarea>
           </div>
-          <button type="submit" class="btn-submit" id="sendBtn">Send Request →</button>
+          <button type="submit" class="btn-submit" id="sendBtn">Book a Visit →</button>
         </form>
       </div>
     </div>
