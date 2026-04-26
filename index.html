@@ -3,861 +3,682 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quality Care Landscaping | Signal Mountain, TN</title>
-  <meta name="description" content="Professional landscaping services in Signal Mountain, TN. Lawn mowing, edging, leaf cleanup, shrub trimming, mulch installation & more. Call (423)-826-9323 for a free quote." />
-  <meta name="keywords" content="landscaping Signal Mountain TN, lawn care Signal Mountain, lawn mowing Signal Mountain Tennessee, yard cleanup Signal Mountain" />
-  <meta property="og:title" content="Quality Care Landscaping | Signal Mountain, TN" />
-  <meta property="og:description" content="Student-owned landscaping business serving Signal Mountain, TN. Reliable. Affordable. Local." />
-  <meta property="og:type" content="website" />
+  <title>Quality Care Landscaping — Signal Mountain, TN</title>
+  <meta name="description" content="Lawn mowing, edging, leaf cleanup, shrub trimming & more in Signal Mountain, TN. Call (423)-826-9323 for a free quote from Gideon & Aiden." />
+  <meta name="keywords" content="landscaping Signal Mountain TN, lawn care Signal Mountain, lawn mowing Signal Mountain Tennessee" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --green: #15803d;
-      --green-dark: #166534;
-      --green-light: #dcfce7;
-      --cream: #fafaf7;
-      --gray-50: #f9fafb;
-      --gray-100: #f3f4f6;
-      --gray-200: #e5e7eb;
-      --gray-600: #4b5563;
-      --gray-700: #374151;
-      --gray-900: #111827;
+      --ink: #0d1a10;
+      --green: #1a6b35;
+      --green-bright: #3ec468;
+      --cream: #f7f5f0;
       --white: #ffffff;
+      --gray: #6b7280;
+      --light: #f0ede8;
     }
 
     html { scroll-behavior: smooth; }
-
     body {
       font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-      color: var(--gray-900);
       background: var(--white);
-      line-height: 1.6;
+      color: var(--ink);
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ---- NAV ---- */
+    /* ─── NAV ─── */
     nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--white);
-      border-bottom: 1px solid var(--gray-200);
-    }
-
-    .nav-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-      height: 64px;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 50;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding: 1.25rem 2rem;
+      mix-blend-mode: normal;
     }
 
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 800;
-      color: var(--green);
-      letter-spacing: -0.5px;
+    nav.scrolled {
+      background: var(--ink);
+      padding: 1rem 2rem;
+      transition: background 0.3s, padding 0.3s;
+    }
+
+    .nav-logo {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
       text-decoration: none;
     }
 
-    .logo span { color: var(--gray-900); }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--gray-700);
-      font-weight: 500;
-      font-size: 0.95rem;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover { color: var(--green); }
-
-    .nav-cta {
-      background: var(--green);
-      color: white !important;
-      padding: 0.5rem 1.25rem;
-      border-radius: 6px;
-      font-weight: 600 !important;
-      transition: background 0.2s !important;
-    }
-
-    .nav-cta:hover { background: var(--green-dark) !important; color: white !important; }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 4px;
-    }
-
-    .hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--gray-700);
-      border-radius: 2px;
-      transition: all 0.3s;
-    }
-
-    .mobile-menu {
-      display: none;
-      flex-direction: column;
-      gap: 0;
-      border-top: 1px solid var(--gray-200);
-      background: white;
-    }
-
-    .mobile-menu.open { display: flex; }
-
-    .mobile-menu a {
-      padding: 0.875rem 1.5rem;
-      text-decoration: none;
-      color: var(--gray-700);
-      font-weight: 500;
-      border-bottom: 1px solid var(--gray-100);
-      transition: color 0.2s;
-    }
-
-    .mobile-menu a:hover { color: var(--green); }
-
-    /* ---- HERO ---- */
-    .hero {
-      position: relative;
-      height: 100svh;
-      min-height: 580px;
+    .nav-right {
       display: flex;
       align-items: center;
-      justify-content: center;
-      background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663562922545/2q3qepax745A8Top6XT8KM/hero-main-YvLjNjMnwv4LdmJ3s77HNx.webp');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+      gap: 1.5rem;
     }
 
-    .hero::after {
-      content: '';
+    .nav-phone {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--green-bright);
+      text-decoration: none;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-cta {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--ink);
+      background: var(--green-bright);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .nav-cta:hover { opacity: 0.85; }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100svh;
+      background: var(--ink);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.45) 100%);
+      background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663562922545/2q3qepax745A8Top6XT8KM/hero-main-YvLjNjMnwv4LdmJ3s77HNx.webp');
+      background-size: cover;
+      background-position: center 60%;
+      opacity: 0.2;
     }
 
     .hero-content {
       position: relative;
       z-index: 1;
-      text-align: center;
-      color: white;
-      padding: 0 1.5rem;
-      max-width: 760px;
+      max-width: 1100px;
+      width: 100%;
     }
 
-    .hero-tag {
-      display: inline-block;
-      background: rgba(255,255,255,0.15);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255,255,255,0.3);
-      color: white;
-      padding: 0.375rem 1rem;
-      border-radius: 100px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.5px;
+    .hero-location {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 3px;
       text-transform: uppercase;
+      color: var(--green-bright);
       margin-bottom: 1.5rem;
     }
 
-    .hero h1 {
-      font-size: clamp(2.75rem, 7vw, 5.5rem);
+    .hero-number {
+      display: block;
+      font-size: clamp(3.5rem, 10vw, 9rem);
       font-weight: 800;
-      line-height: 1.05;
-      letter-spacing: -2px;
-      margin-bottom: 1.25rem;
-    }
-
-    .hero p {
-      font-size: clamp(1rem, 2.5vw, 1.3rem);
-      font-weight: 400;
-      opacity: 0.9;
-      margin-bottom: 2.25rem;
-      max-width: 480px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--green);
-      color: white;
-      padding: 0.875rem 2rem;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 700;
+      line-height: 0.9;
+      letter-spacing: -3px;
+      color: var(--white);
       text-decoration: none;
-      transition: background 0.2s, transform 0.15s;
+      margin-bottom: 2rem;
+      transition: color 0.2s;
     }
 
-    .btn-primary:hover { background: var(--green-dark); transform: translateY(-1px); }
+    .hero-number:hover { color: var(--green-bright); }
 
-    .btn-ghost {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: rgba(255,255,255,0.15);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255,255,255,0.4);
-      color: white;
-      padding: 0.875rem 2rem;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s;
-    }
-
-    .btn-ghost:hover { background: rgba(255,255,255,0.25); }
-
-    /* ---- TRUST BAR ---- */
-    .trust-bar {
-      background: var(--green);
-      color: white;
-      padding: 0.875rem 1.5rem;
+    .hero-bottom {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
+      align-items: flex-end;
+      justify-content: space-between;
       flex-wrap: wrap;
+      gap: 2rem;
     }
 
-    .trust-item {
-      display: flex;
+    .hero-tagline {
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      color: rgba(255,255,255,0.55);
+      font-weight: 400;
+      line-height: 1.5;
+      max-width: 480px;
+    }
+
+    .hero-tagline strong {
+      color: rgba(255,255,255,0.9);
+      font-weight: 700;
+    }
+
+    .hero-btn {
+      display: inline-flex;
       align-items: center;
       gap: 0.5rem;
+      background: var(--green-bright);
+      color: var(--ink);
       font-size: 0.9rem;
-      font-weight: 600;
-      opacity: 0.95;
-    }
-
-    /* ---- SECTIONS ---- */
-    section { padding: 5rem 1.5rem; }
-
-    .section-inner { max-width: 1100px; margin: 0 auto; }
-
-    .section-label {
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 0.75rem;
-    }
-
-    .section-title {
-      font-size: clamp(2rem, 5vw, 3rem);
       font-weight: 800;
-      letter-spacing: -1px;
-      line-height: 1.1;
-      color: var(--gray-900);
-      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: opacity 0.2s;
     }
 
-    .section-sub {
-      font-size: 1.1rem;
-      color: var(--gray-600);
-      max-width: 520px;
-      line-height: 1.6;
+    .hero-btn:hover { opacity: 0.85; }
+
+    /* ─── SERVICES ─── */
+    #services {
+      background: var(--white);
+      padding: 7rem 2rem;
     }
 
-    /* ---- SERVICES ---- */
-    #services { background: var(--white); }
-
-    .services-header { margin-bottom: 3.5rem; }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0;
+    .services-inner {
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
-    .service-item {
-      padding: 2rem 2rem 2rem 1.75rem;
-      border-left: 3px solid var(--green-light);
-      transition: border-color 0.2s, padding-left 0.2s;
+    .services-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 3.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .services-top h2 {
+      font-size: clamp(2.25rem, 5vw, 3.5rem);
+      font-weight: 800;
+      letter-spacing: -2px;
+      line-height: 1;
+    }
+
+    .services-top p {
+      font-size: 0.9rem;
+      color: var(--gray);
+      max-width: 280px;
+      line-height: 1.5;
+    }
+
+    .service-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.6rem 0;
+      border-bottom: 1px solid #e8e8e8;
+      gap: 2rem;
+      transition: padding-left 0.2s;
       cursor: default;
     }
 
-    .service-item:hover {
-      border-left-color: var(--green);
-      padding-left: 2.25rem;
+    .service-row:hover {
+      padding-left: 1rem;
     }
 
-    .service-icon {
-      width: 40px;
-      height: 40px;
-      background: var(--green-light);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1rem;
-      font-size: 1.2rem;
+    .service-row:hover .service-name {
+      color: var(--green);
     }
 
-    .service-item h3 {
-      font-size: 1.05rem;
+    .service-num {
+      font-size: 0.75rem;
       font-weight: 700;
-      color: var(--gray-900);
-      margin-bottom: 0.5rem;
+      color: #ccc;
+      letter-spacing: 1px;
+      min-width: 2rem;
     }
 
-    .service-item p {
-      font-size: 0.9rem;
-      color: var(--gray-600);
-      line-height: 1.55;
+    .service-name {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 700;
+      flex: 1;
+      letter-spacing: -0.3px;
+      transition: color 0.2s;
     }
 
-    /* ---- ABOUT ---- */
-    #about { background: var(--cream); }
+    .service-desc {
+      font-size: 0.875rem;
+      color: var(--gray);
+      max-width: 320px;
+      text-align: right;
+    }
 
-    .about-grid {
+    /* ─── ABOUT ─── */
+    #about {
+      background: var(--cream);
+      padding: 7rem 2rem;
+    }
+
+    .about-inner {
+      max-width: 1100px;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 5rem;
+      gap: 6rem;
       align-items: center;
     }
 
-    .about-text p {
-      color: var(--gray-700);
-      line-height: 1.75;
-      margin-bottom: 1.25rem;
-      font-size: 1.025rem;
-    }
+    .about-photo-col { position: relative; }
 
-    .about-text p:last-child { margin-bottom: 0; }
-
-    /* Photo card */
-    .founder-photo-wrap {
-      position: relative;
-    }
-
-    .founder-photo {
+    .about-photo {
       width: 100%;
       aspect-ratio: 3/4;
       object-fit: cover;
       object-position: top center;
-      border-radius: 16px;
+      border-radius: 8px;
       display: block;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
     }
 
-    .founder-label {
-      position: absolute;
-      bottom: 1.25rem;
-      left: 1.25rem;
-      right: 1.25rem;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(12px);
-      border-radius: 10px;
-      padding: 1rem 1.25rem;
+    .about-photo-col .no-photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: linear-gradient(135deg, #1a3d22 0%, #0d1a10 100%);
+      border-radius: 8px;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      align-items: flex-end;
+      padding: 2rem;
     }
 
-    .founder-label-name {
+    .no-photo-label {
       font-size: 1.1rem;
-      font-weight: 800;
-      color: var(--gray-900);
-      letter-spacing: -0.3px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.5);
+      font-style: italic;
     }
 
-    .founder-label-role {
-      font-size: 0.8rem;
-      color: var(--gray-600);
-      font-weight: 500;
+    .about-caption {
+      position: absolute;
+      bottom: -1.5rem;
+      right: -1.5rem;
+      background: var(--green);
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      line-height: 1.4;
     }
 
-    .founder-label-badge {
-      background: var(--green-light);
-      color: var(--green-dark);
+    .about-text-col {}
+
+    .about-eyebrow {
       font-size: 0.75rem;
       font-weight: 700;
-      padding: 0.35rem 0.75rem;
-      border-radius: 100px;
-      white-space: nowrap;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 1.25rem;
     }
 
-    .about-stats {
-      display: flex;
-      gap: 2rem;
-      margin-top: 2rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--gray-200);
-    }
-
-    .about-stat-num {
-      font-size: 1.75rem;
+    .about-text-col h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 800;
-      color: var(--gray-900);
-      letter-spacing: -0.5px;
+      letter-spacing: -1.5px;
+      line-height: 1.05;
+      margin-bottom: 2rem;
     }
 
-    .about-stat-label {
-      font-size: 0.8rem;
-      color: var(--gray-600);
-      font-weight: 500;
+    .about-text-col p {
+      font-size: 1rem;
+      color: #4a4a4a;
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+      max-width: 440px;
     }
 
-    /* ---- CONTACT ---- */
-    #contact { background: var(--white); }
+    .about-text-col p:last-of-type { margin-bottom: 0; }
 
-    .contact-grid {
+    /* ─── CONTACT ─── */
+    #contact {
+      background: var(--white);
+      padding: 7rem 2rem;
+    }
+
+    .contact-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .contact-top {
       display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      gap: 5rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
       align-items: start;
     }
 
-    .contact-info { padding-top: 0.5rem; }
-
-    .contact-info .section-title { margin-bottom: 1.25rem; }
-
-    .contact-detail {
-      display: flex;
-      align-items: center;
-      gap: 0.875rem;
-      padding: 1rem 0;
-      border-bottom: 1px solid var(--gray-100);
+    .contact-left h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.05;
+      margin-bottom: 0.75rem;
     }
 
-    .contact-detail:last-of-type { border-bottom: none; }
-
-    .contact-icon {
-      width: 42px;
-      height: 42px;
-      background: var(--green-light);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-size: 1.1rem;
+    .contact-left p {
+      font-size: 0.95rem;
+      color: var(--gray);
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
     }
 
-    .contact-detail a {
-      color: var(--gray-900);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
+    .contact-big-phone {
       display: block;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      letter-spacing: -2px;
+      color: var(--ink);
+      text-decoration: none;
+      border-top: 2px solid var(--ink);
+      border-bottom: 2px solid var(--ink);
+      padding: 1rem 0;
+      margin-bottom: 1.5rem;
+      transition: color 0.2s;
     }
 
-    .contact-detail a:hover { color: var(--green); }
+    .contact-big-phone:hover { color: var(--green); }
 
-    .contact-detail span {
-      font-size: 0.8rem;
-      color: var(--gray-600);
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
     }
 
-    /* ---- FORM ---- */
-    form {
-      background: var(--gray-50);
-      border: 1px solid var(--gray-200);
-      border-radius: 16px;
+    .contact-link {
+      font-size: 0.9rem;
+      color: var(--gray);
+      text-decoration: none;
+      transition: color 0.2s;
+      font-weight: 500;
+    }
+
+    .contact-link:hover { color: var(--green); }
+
+    /* ─── FORM ─── */
+    .form-wrap {
+      background: var(--light);
+      border-radius: 12px;
       padding: 2.5rem;
     }
 
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-
-    .form-group { margin-bottom: 1.25rem; }
-
-    .form-group label {
-      display: block;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--gray-700);
-      margin-bottom: 0.5rem;
+    .form-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      margin-bottom: 1.75rem;
     }
 
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
+    .fg { margin-bottom: 1.1rem; }
+
+    .fg label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 0.4rem;
+    }
+
+    .fg input,
+    .fg select,
+    .fg textarea {
       width: 100%;
       padding: 0.75rem 1rem;
-      border: 1.5px solid var(--gray-200);
-      border-radius: 8px;
-      font-size: 0.95rem;
+      background: var(--white);
+      border: 1.5px solid transparent;
+      border-radius: 6px;
+      font-size: 0.9rem;
       font-family: inherit;
-      color: var(--gray-900);
-      background: white;
-      transition: border-color 0.2s, box-shadow 0.2s;
+      color: var(--ink);
       outline: none;
       appearance: none;
+      transition: border-color 0.2s;
     }
 
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
+    .fg input:focus,
+    .fg select:focus,
+    .fg textarea:focus {
       border-color: var(--green);
-      box-shadow: 0 0 0 3px rgba(21,128,61,0.1);
     }
 
-    .form-group textarea { min-height: 120px; resize: vertical; }
+    .fg textarea { min-height: 100px; resize: vertical; }
 
-    .form-group select {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    .fg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+
+    .fg select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: right 1rem center;
       padding-right: 2.5rem;
     }
 
-    .btn-submit {
+    .btn-send {
       width: 100%;
-      background: var(--green);
-      color: white;
+      background: var(--ink);
+      color: var(--white);
       border: none;
-      padding: 1rem;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 700;
+      border-radius: 6px;
+      padding: 0.9rem;
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
       font-family: inherit;
       cursor: pointer;
-      transition: background 0.2s, transform 0.15s;
       margin-top: 0.5rem;
+      transition: background 0.2s;
     }
 
-    .btn-submit:hover { background: var(--green-dark); transform: translateY(-1px); }
-    .btn-submit:active { transform: translateY(0); }
+    .btn-send:hover { background: var(--green); }
 
-    .form-note {
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--gray-600);
-      margin-top: 0.75rem;
-    }
-
-    /* ---- FOOTER ---- */
+    /* ─── FOOTER ─── */
     footer {
-      background: var(--gray-900);
-      color: white;
-      padding: 3rem 1.5rem 2rem;
-    }
-
-    .footer-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
-      gap: 3rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .footer-brand .logo { font-size: 1.3rem; }
-
-    .footer-brand p {
-      margin-top: 0.75rem;
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.55);
-      line-height: 1.6;
-    }
-
-    .footer-col h4 {
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-      margin-bottom: 1rem;
-    }
-
-    .footer-col a {
-      display: block;
-      text-decoration: none;
-      color: rgba(255,255,255,0.8);
-      font-size: 0.95rem;
-      margin-bottom: 0.6rem;
-      transition: color 0.2s;
-    }
-
-    .footer-col a:hover { color: white; }
-
-    .footer-col p {
-      color: rgba(255,255,255,0.8);
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding-top: 1.5rem;
+      background: var(--ink);
+      color: rgba(255,255,255,0.45);
+      padding: 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 1rem;
+      font-size: 0.8rem;
     }
 
-    .footer-bottom p {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.4);
+    footer a {
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      transition: color 0.2s;
     }
 
-    /* ---- ANIMATIONS ---- */
-    .fade-up {
+    footer a:hover { color: rgba(255,255,255,0.8); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.25rem; }
+      nav.scrolled { padding: 0.875rem 1.25rem; }
+      .nav-phone { display: none; }
+
+      .hero { padding: 0 1.25rem 3rem; }
+      .hero-number { letter-spacing: -2px; }
+
+      .services-inner, .about-inner, .contact-inner { padding: 0; }
+      #services, #about, #contact { padding: 4.5rem 1.25rem; }
+
+      .services-desc { display: none; }
+
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .about-photo-col { order: -1; max-width: 300px; }
+      .about-caption { right: 0; bottom: -1rem; }
+
+      .contact-top {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .fg-row { grid-template-columns: 1fr; }
+
+      footer { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    }
+
+    /* ─── FADE IN ─── */
+    .reveal {
       opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.55s ease, transform 0.55s ease;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
     }
 
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ---- RESPONSIVE ---- */
-    @media (max-width: 900px) {
-      .services-grid { grid-template-columns: 1fr 1fr; }
-      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .about-grid .founder-photo-wrap { max-width: 360px; margin: 0 auto; }
-      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    @media (max-width: 640px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-      .services-grid { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .trust-bar { gap: 1rem; }
-      .hero { background-attachment: scroll; }
-      section { padding: 3.5rem 1.25rem; }
-      .about-stats { gap: 1.25rem; }
-    }
+    .reveal.in { opacity: 1; transform: none; }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="top">
-  <div class="nav-inner">
-    <a href="#top" class="logo">Quality <span>Care</span></a>
-    <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
-    </ul>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#services" onclick="closeMobile()">Services</a>
-    <a href="#about" onclick="closeMobile()">About</a>
-    <a href="#contact" onclick="closeMobile()">Get a Quote</a>
-    <a href="tel:4238269323">📞 (423)-826-9323</a>
+<nav id="nav">
+  <a href="#" class="nav-logo">Quality Care</a>
+  <div class="nav-right">
+    <a href="tel:4238269323" class="nav-phone">(423)-826-9323</a>
+    <a href="#contact" class="nav-cta">Free Quote</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
   <div class="hero-content">
-    <div class="hero-tag">Signal Mountain, TN</div>
-    <h1>Your Yard,<br>Our Pride.</h1>
-    <p>Reliable. Affordable. Local. Professional landscaping from your neighbors at SMMHS.</p>
-    <div class="hero-btns">
-      <a href="#contact" class="btn-primary">
+    <p class="hero-location">Signal Mountain, TN</p>
+    <a href="tel:4238269323" class="hero-number">(423)<br>826-9323</a>
+    <div class="hero-bottom">
+      <p class="hero-tagline">
+        <strong>Gideon & Aiden</strong> — SMMHS students who mow, edge,<br>trim, and clean yards right here in Signal Mountain.
+      </p>
+      <a href="#contact" class="hero-btn">
         Get a Free Quote
         <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a href="tel:4238269323" class="btn-ghost">
-        <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.41 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012.32 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.14 6.14l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Call Now
       </a>
     </div>
   </div>
 </section>
 
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-item">
-    <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z" fill="currentColor"/></svg>
-    Signal Mountain, TN
-  </div>
-  <div class="trust-item">
-    <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    Student-Owned & Operated
-  </div>
-  <div class="trust-item">
-    <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    Free Quotes · Fast Response
-  </div>
-</div>
-
 <!-- SERVICES -->
 <section id="services">
-  <div class="section-inner">
-    <div class="services-header fade-up">
-      <div class="section-label">What We Do</div>
-      <h2 class="section-title">Everything Your<br>Yard Needs</h2>
-      <p class="section-sub">Six core services delivered with care and attention to detail — every time.</p>
+  <div class="services-inner">
+    <div class="services-top reveal">
+      <h2>What We Do</h2>
+      <p>Six services. Done right. We show up and we don't cut corners.</p>
     </div>
-    <div class="services-grid">
-      <div class="service-item fade-up">
-        <div class="service-icon">🌿</div>
-        <h3>Lawn Mowing & Edging</h3>
-        <p>Crisp cuts and precise edging that make your yard stand out on the street.</p>
-      </div>
-      <div class="service-item fade-up">
-        <div class="service-icon">✂️</div>
-        <h3>Trimming & Blowing</h3>
-        <p>Expert trimming around obstacles and full blowout cleanup for a finished look.</p>
-      </div>
-      <div class="service-item fade-up">
-        <div class="service-icon">🍂</div>
-        <h3>Leaf Cleanup</h3>
-        <p>Seasonal leaf removal and yard cleanup so your lawn breathes through fall and winter.</p>
-      </div>
-      <div class="service-item fade-up">
-        <div class="service-icon">🌳</div>
-        <h3>Shrub Trimming</h3>
-        <p>Shaped and healthy shrubs and hedges that boost your curb appeal year-round.</p>
-      </div>
-      <div class="service-item fade-up">
-        <div class="service-icon">🪨</div>
-        <h3>Mulch Installation</h3>
-        <p>Quality mulch laid clean and even in your landscaping beds — moisture locked in.</p>
-      </div>
-      <div class="service-item fade-up">
-        <div class="service-icon">🧹</div>
-        <h3>General Yard Cleanup</h3>
-        <p>Full-service yard maintenance for anything that needs a fresh start.</p>
-      </div>
+
+    <div class="service-row reveal">
+      <span class="service-num">01</span>
+      <span class="service-name">Lawn Mowing & Edging</span>
+      <span class="service-desc">Crisp cuts, clean edges. Every visit.</span>
+    </div>
+    <div class="service-row reveal">
+      <span class="service-num">02</span>
+      <span class="service-name">Trimming & Blowing</span>
+      <span class="service-desc">Tight around every obstacle, blown clean.</span>
+    </div>
+    <div class="service-row reveal">
+      <span class="service-num">03</span>
+      <span class="service-name">Leaf Cleanup</span>
+      <span class="service-desc">Seasonal removal so your lawn can breathe.</span>
+    </div>
+    <div class="service-row reveal">
+      <span class="service-num">04</span>
+      <span class="service-name">Shrub Trimming</span>
+      <span class="service-desc">Shaped and healthy, all year round.</span>
+    </div>
+    <div class="service-row reveal">
+      <span class="service-num">05</span>
+      <span class="service-name">Mulch Installation</span>
+      <span class="service-desc">Laid even, looks sharp, locks in moisture.</span>
+    </div>
+    <div class="service-row reveal">
+      <span class="service-num">06</span>
+      <span class="service-name">General Yard Cleanup</span>
+      <span class="service-desc">Whatever it needs — we handle it.</span>
     </div>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-  <div class="section-inner">
-    <div class="about-grid">
-      <div class="about-text fade-up">
-        <div class="section-label">Our Story</div>
-        <h2 class="section-title">Local Students.<br>Real Results.</h2>
-        <p>Quality Care Landscaping is a student-owned business proudly serving Signal Mountain, Tennessee. Founded and run by Gideon and Aiden — two students from Signal Mountain Middle High School — we bring energy, dedication, and a genuine commitment to every yard we touch.</p>
-        <p>We believe professional landscaping shouldn't be complicated or expensive. Our focus is reliable, affordable service with attention to the details that matter. Every yard reflects our personal standard of quality.</p>
-        <p>When you hire Quality Care, you're supporting local students who care about making Signal Mountain more beautiful, one yard at a time.</p>
-        <div class="about-stats">
-          <div>
-            <div class="about-stat-num">6</div>
-            <div class="about-stat-label">Services</div>
-          </div>
-          <div>
-            <div class="about-stat-num">24h</div>
-            <div class="about-stat-label">Quote Response</div>
-          </div>
-          <div>
-            <div class="about-stat-num">100%</div>
-            <div class="about-stat-label">Local</div>
-          </div>
-        </div>
+  <div class="about-inner">
+    <div class="about-photo-col reveal">
+      <img
+        src="images/gideon.jpg"
+        alt="Gideon, co-founder of Quality Care Landscaping"
+        class="about-photo"
+        onerror="this.parentNode.innerHTML='<div class=\'no-photo\'><span class=\'no-photo-label\'>Gideon &amp; Aiden<br>Quality Care Landscaping</span></div>'"
+        loading="lazy"
+      />
+      <div class="about-caption">
+        Gideon<br>Co-Founder
       </div>
-      <div class="founder-photo-wrap fade-up">
-        <img
-          src="images/gideon.jpg"
-          alt="Gideon, co-founder of Quality Care Landscaping"
-          class="founder-photo"
-          loading="lazy"
-        />
-        <div class="founder-label">
-          <div>
-            <div class="founder-label-name">Gideon</div>
-            <div class="founder-label-role">Co-Founder · Quality Care</div>
-          </div>
-          <div class="founder-label-badge">SMMHS</div>
-        </div>
-      </div>
+    </div>
+
+    <div class="about-text-col reveal">
+      <p class="about-eyebrow">Our Story</p>
+      <h2>Signal Mountain kids.<br>Serious work.</h2>
+      <p>We're Gideon and Aiden — students at SMMHS who started Quality Care to do good work in our own community. Not a big company. Just two guys who show up on time and take care of your yard like it's our own.</p>
+      <p>Every job gets the same attention. We're building a reputation here, and every lawn we work on is part of that.</p>
+      <p>Hire us and you're supporting students who'd rather be working than complaining. Signal Mountain deserves better lawns. We're on it.</p>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="section-inner">
-    <div class="contact-grid">
-      <div class="contact-info fade-up">
-        <div class="section-label">Get In Touch</div>
-        <h2 class="section-title">Ready to Transform Your Yard?</h2>
-        <p class="section-sub" style="margin-bottom: 2rem;">Fill out the form and Gideon and Aiden will get back to you within 24 hours.</p>
-
-        <div class="contact-detail">
-          <div class="contact-icon">📞</div>
-          <div>
-            <a href="tel:4238269323">(423)-826-9323</a>
-            <span>Call or text anytime</span>
-          </div>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-icon">📍</div>
-          <div>
-            <a>Signal Mountain, TN</a>
-            <span>Serving the local community</span>
-          </div>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-icon">📸</div>
-          <div>
-            <a href="https://instagram.com/qualitycarelandscaping12" target="_blank" rel="noopener noreferrer">@qualitycarelandscaping12</a>
-            <span>Follow us on Instagram</span>
-          </div>
+  <div class="contact-inner">
+    <div class="contact-top">
+      <div class="contact-left reveal">
+        <h2>Let's sort your yard out.</h2>
+        <p>Fill out the form or just call. We respond fast.</p>
+        <a href="tel:4238269323" class="contact-big-phone">(423)-826-9323</a>
+        <div class="contact-links">
+          <a href="https://instagram.com/qualitycarelandscaping12" target="_blank" rel="noopener noreferrer" class="contact-link">Instagram → @qualitycarelandscaping12</a>
+          <span class="contact-link">Signal Mountain, Tennessee</span>
         </div>
       </div>
 
-      <div class="fade-up">
-        <form name="quote-request" method="POST" netlify data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleSubmit(event)">
+      <div class="form-wrap reveal">
+        <p class="form-title">Request a Free Quote</p>
+        <form name="quote-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleSubmit(event)">
           <input type="hidden" name="form-name" value="quote-request" />
-          <input type="hidden" name="bot-field" />
+          <input type="hidden" name="bot-field" style="display:none" />
 
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Name *</label>
-              <input type="text" id="name" name="name" placeholder="Your name" required />
+          <div class="fg-row">
+            <div class="fg">
+              <label>Name</label>
+              <input type="text" name="name" placeholder="Your name" required />
             </div>
-            <div class="form-group">
-              <label for="phone">Phone *</label>
-              <input type="tel" id="phone" name="phone" placeholder="(423) 123-4567" required />
+            <div class="fg">
+              <label>Phone</label>
+              <input type="tel" name="phone" placeholder="(423) ···-····" required />
             </div>
           </div>
 
-          <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          <div class="fg">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="your@email.com" required />
           </div>
 
-          <div class="form-group">
-            <label for="service">Service Needed *</label>
-            <select id="service" name="service" required>
-              <option value="" disabled selected>Select a service</option>
+          <div class="fg">
+            <label>Service</label>
+            <select name="service" required>
+              <option value="" disabled selected>What do you need?</option>
               <option>Lawn Mowing & Edging</option>
               <option>Trimming & Blowing</option>
               <option>Leaf Cleanup</option>
@@ -867,69 +688,45 @@
             </select>
           </div>
 
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell us about your project..."></textarea>
+          <div class="fg">
+            <label>Message (optional)</label>
+            <textarea name="message" placeholder="Anything we should know about the yard..."></textarea>
           </div>
 
-          <button type="submit" class="btn-submit" id="submitBtn">Get Your Free Quote</button>
-          <p class="form-note">We respond within 24 hours. No spam, ever.</p>
+          <button type="submit" class="btn-send" id="sendBtn">Send Request →</button>
         </form>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="#top" class="logo" style="color: #4ade80;">Quality <span style="color: white;">Care</span></a>
-        <p>Student-owned landscaping serving Signal Mountain, TN. Reliable. Affordable. Local.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <a href="#services">Lawn Mowing & Edging</a>
-        <a href="#services">Trimming & Blowing</a>
-        <a href="#services">Leaf Cleanup</a>
-        <a href="#services">Shrub Trimming</a>
-        <a href="#services">Mulch Installation</a>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <a href="tel:4238269323">(423)-826-9323</a>
-        <a href="https://instagram.com/qualitycarelandscaping12" target="_blank" rel="noopener noreferrer">@qualitycarelandscaping12</a>
-        <p>Signal Mountain, TN</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Quality Care Landscaping. Owned and operated by Gideon and Aiden.</p>
-      <p>SMMHS · Signal Mountain, TN</p>
-    </div>
-  </div>
+  <span>© 2026 Quality Care Landscaping — Gideon & Aiden, SMMHS</span>
+  <a href="https://instagram.com/qualitycarelandscaping12" target="_blank" rel="noopener noreferrer">@qualitycarelandscaping12</a>
 </footer>
 
 <script>
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-  function closeMobile() { mobileMenu.classList.remove('open'); }
+  // Nav background on scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 60);
-        observer.unobserve(entry.target);
+  // Reveal on scroll
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('in'), i * 80);
+        obs.unobserve(e.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
+  // Form submit
   function handleSubmit(e) {
-    const btn = document.getElementById('submitBtn');
-    btn.textContent = 'Sending...';
+    const btn = document.getElementById('sendBtn');
+    btn.textContent = 'Sending…';
     btn.disabled = true;
   }
 </script>
