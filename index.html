@@ -700,6 +700,112 @@
     }
     .footer-links a:hover { color: white; }
 
+    /* ─── PRICING ─── */
+    #pricing { background: var(--cream); }
+
+    .pricing-head { margin-bottom: 3rem; }
+
+    .pricing-note {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      background: var(--green-mid);
+      color: white;
+      padding: 0.3rem 0.75rem;
+      border-radius: 100px;
+      margin-top: 0.75rem;
+    }
+
+    .pricing-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      padding: 1.4rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pricing-row:last-child { border-bottom: none; }
+
+    .pricing-left { flex: 1; }
+
+    .pricing-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.2px;
+    }
+
+    .pricing-detail {
+      font-size: 0.82rem;
+      color: var(--gray);
+      margin-top: 0.2rem;
+    }
+
+    .pricing-price {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--green-mid);
+      letter-spacing: -0.5px;
+      white-space: nowrap;
+    }
+
+    /* ─── FAQ ─── */
+    #faq { background: var(--white); }
+
+    .faq-head { margin-bottom: 2.5rem; }
+
+    details {
+      border-bottom: 1px solid var(--border);
+    }
+
+    details:first-of-type { border-top: 1px solid var(--border); }
+
+    summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 0;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+      cursor: pointer;
+      list-style: none;
+      gap: 1rem;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    .faq-icon {
+      width: 22px;
+      height: 22px;
+      border: 1.5px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1rem;
+      color: var(--gray);
+      transition: all 0.2s;
+    }
+
+    details[open] .faq-icon {
+      background: var(--green-mid);
+      border-color: var(--green-mid);
+      color: white;
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 0 0 1.25rem;
+      font-size: 0.92rem;
+      color: var(--gray);
+      line-height: 1.7;
+      max-width: 640px;
+    }
+
     /* ─── REVEAL ─── */
     .reveal {
       opacity: 0;
@@ -729,6 +835,7 @@
       .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
       .fg-row { grid-template-columns: 1fr; }
       footer { flex-direction: column; align-items: flex-start; }
+      .pricing-detail { display: none; }
     }
 
     @media (max-width: 480px) {
@@ -907,6 +1014,105 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="inner">
+    <div class="pricing-head reveal">
+      <p class="eyebrow">Pricing</p>
+      <h2 class="sec-title">Honest Prices.<br>No Surprises.</h2>
+      <span class="pricing-note">Free quotes on all jobs — final price depends on yard size</span>
+    </div>
+
+    <div class="pricing-row reveal">
+      <div class="pricing-left">
+        <div class="pricing-name">Lawn Mowing & Edging</div>
+        <div class="pricing-detail">Mow, edge, and cleanup — standard residential yard</div>
+      </div>
+      <div class="pricing-price">From $40</div>
+    </div>
+
+    <div class="pricing-row reveal">
+      <div class="pricing-left">
+        <div class="pricing-name">Trimming & Blowing</div>
+        <div class="pricing-detail">Weed-eat around obstacles + full blowout</div>
+      </div>
+      <div class="pricing-price">From $30</div>
+    </div>
+
+    <div class="pricing-row reveal">
+      <div class="pricing-left">
+        <div class="pricing-name">Leaf Cleanup</div>
+        <div class="pricing-detail">Full yard leaf removal — spring or fall</div>
+      </div>
+      <div class="pricing-price">From $75</div>
+    </div>
+
+    <div class="pricing-row reveal">
+      <div class="pricing-left">
+        <div class="pricing-name">Shrub Trimming</div>
+        <div class="pricing-detail">Shaping and cleanup per shrub</div>
+      </div>
+      <div class="pricing-price">$10–$20 / shrub</div>
+    </div>
+
+    <div class="pricing-row reveal">
+      <div class="pricing-left">
+        <div class="pricing-name">Mulch Installation</div>
+        <div class="pricing-detail">Materials + installation, per cubic yard</div>
+      </div>
+      <div class="pricing-price">From $55 / yd</div>
+    </div>
+
+    <div class="pricing-row reveal">
+      <div class="pricing-left">
+        <div class="pricing-name">General Yard Cleanup</div>
+        <div class="pricing-detail">Larger or overgrown cleanups — quoted per job</div>
+      </div>
+      <div class="pricing-price">From $65</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="inner">
+    <div class="faq-head reveal">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="sec-title">Common Questions</h2>
+    </div>
+
+    <details class="reveal">
+      <summary>Do you bring your own equipment? <span class="faq-icon">+</span></summary>
+      <p class="faq-answer">Yes — we bring everything we need. You don't have to provide anything, just let us know where to access the yard.</p>
+    </details>
+
+    <details class="reveal">
+      <summary>Do you do one-time jobs or only recurring? <span class="faq-icon">+</span></summary>
+      <p class="faq-answer">Both. We're happy to do a one-time cleanup or set up recurring visits — weekly, bi-weekly, or monthly. Whatever works for you.</p>
+    </details>
+
+    <details class="reveal">
+      <summary>How do I pay? <span class="faq-icon">+</span></summary>
+      <p class="faq-answer">Cash, Venmo, or CashApp — whichever is easiest for you. Payment is due after the job is done and you're satisfied.</p>
+    </details>
+
+    <details class="reveal">
+      <summary>How often should I get my lawn mowed? <span class="faq-icon">+</span></summary>
+      <p class="faq-answer">Every 1–2 weeks during spring and summer when grass grows fast. In fall and winter, every 3–4 weeks is usually enough.</p>
+    </details>
+
+    <details class="reveal">
+      <summary>What areas do you serve? <span class="faq-icon">+</span></summary>
+      <p class="faq-answer">We're based in Signal Mountain, TN and serve Signal Mountain, Walden, and surrounding areas. Not sure if we cover your address? Just call or text us.</p>
+    </details>
+
+    <details class="reveal">
+      <summary>How do I get a quote? <span class="faq-icon">+</span></summary>
+      <p class="faq-answer">Fill out the form below or call/text (423)-826-9323. We'll get back to you within 24 hours with a price.</p>
+    </details>
   </div>
 </section>
 
