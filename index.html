@@ -142,13 +142,25 @@
       background: #0a0f0b;
     }
 
+    @keyframes kenburns {
+      0%   { transform: scale(1)    translateX(0)     translateY(0); }
+      100% { transform: scale(1.09) translateX(-1.5%) translateY(-1%); }
+    }
+
+    @keyframes heroFade {
+      from { opacity: 0; }
+      to   { opacity: 0.65; }
+    }
+
     .hero-img {
       position: absolute;
-      inset: 0;
+      inset: -5%;
       background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663562922545/2q3qepax745A8Top6XT8KM/hero-main-YvLjNjMnwv4LdmJ3s77HNx.webp');
       background-size: cover;
       background-position: center 55%;
       opacity: 0.65;
+      animation: kenburns 14s ease-in-out infinite alternate, heroFade 1.2s ease forwards;
+      will-change: transform;
     }
 
     .hero-gradient {
@@ -163,11 +175,17 @@
       );
     }
 
+    @keyframes heroUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
     .hero-content {
       position: relative;
       z-index: 2;
       max-width: 1100px;
       width: 100%;
+      animation: heroUp 1s ease 0.4s both;
     }
 
     .hero-eyebrow {
